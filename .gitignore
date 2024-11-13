@@ -1,0 +1,40 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+.venv/
+ENV/
+.ENV/
+
+# FastAPI specific files
+*.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Test coverage
+.coverage
+*.cover
+
+# Docker files (if applicable)
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# pytest cache
+.cache/
+
+# pyenv version file
+.python-version
+
+# environment variables
+.env
