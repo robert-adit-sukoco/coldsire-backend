@@ -25,11 +25,6 @@ ENV/
 .coverage
 *.cover
 
-# Docker files (if applicable)
-.dockerignore
-Dockerfile
-docker-compose.yml
-
 # pytest cache
 .cache/
 
