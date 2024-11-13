@@ -1,11 +1,24 @@
 from fastapi import FastAPI, Request, status, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 from constants.success_response import create_success_response
 from services.check_spf_dkim_dmarc_service import check_spf_dkim_dmarc_service
 from services.check_spf_dkim_dmarc_from_dataset_service import check_spf_dkim_dmarc_from_dataset_service
 from helpers.validators import validate_domain_name
 
+
+
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
